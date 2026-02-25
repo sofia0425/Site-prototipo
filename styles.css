@@ -1,3 +1,75 @@
+/* Slides de apresentação */
+.presentation-section {
+    background: var(--bg-dark);
+    padding: 3rem 0 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.presentation-section .slide {
+    background: rgba(20, 20, 40, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(91, 40, 158, 0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin: 1.5rem 0;
+    max-width: 600px;
+    width: 100%;
+    min-height: 340px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInSlide 0.7s;
+}
+.presentation-section .slide h1, .presentation-section .slide h2 {
+    margin-bottom: 1.2rem;
+    color: var(--roxo-logo);
+    text-align: center;
+}
+.presentation-section .slide p, .presentation-section .slide ul {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+.presentation-section .slide ul {
+    list-style: disc inside;
+    margin-bottom: 1rem;
+}
+.logo-slide {
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(91, 40, 158, 0.18);
+}
+.slide-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.slide-btn {
+    background: var(--roxo-logo);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(91, 40, 158, 0.10);
+}
+.slide-btn:hover {
+    background: var(--roxo-digital);
+    transform: translateY(-2px) scale(1.04);
+}
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 :root {
     --roxo-logo: #8e6db5;
     --azul-1: #91a4ce;

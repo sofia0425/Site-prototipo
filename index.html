@@ -1,3 +1,8 @@
+        <!-- Controles de navegação dos slides -->
+        <div class="slide-controls">
+            <button id="prev-slide" class="slide-btn">Anterior</button>
+            <button id="next-slide" class="slide-btn">Próximo</button>
+        </div>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -46,75 +51,123 @@
         <!-- Divider -->
         <div class="torn-edge top-edge"></div>
 
-        <!-- About/Features Layout (Vertical flow like Last Oasis) -->
-        <section id="sobre" class="dark-content-section">
-            <div class="container container-narrow">
-                <div class="section-header-left">
-                    <span class="small-label">SOBRE O PROJETO</span>
-                    <h2 class="stylized-title">A JORNADA<br>DE ZOE</h2>
-                </div>
+        <!-- Apresentação em formato de slides -->
+        <section id="presentation" class="presentation-section">
+            <!-- Slide 1: Título -->
+            <div class="slide" id="slide-1">
+                <h1 class="glitch" data-text="Guardiã das Águas">Guardiã das Águas</h1>
+                <img src="logo.png" alt="Logo do Jogo" class="logo-slide" style="max-width: 180px; margin: 1rem auto; display: block;">
+                <h2>Equipe: Devs Cansados</h2>
+                <p>Data: 25/02/2026</p>
+            </div>
 
-                <div class="text-block" style="max-width: 800px;">
-                    <p><strong style="color: white;">Eles vêm à noite...</strong> "They Come at Night" é um jogo
-                        vetorizado, estilo top-down, que mistura mecânicas de exploração intensa com uma temática de
-                        terror e sobrevivência.</p>
+            <!-- Slide 2: High Concept -->
+            <div class="slide" id="slide-2">
+                <h2>High Concept</h2>
+                <p><strong>O jogo em uma frase:</strong> Sobreviva à ilha, desvende a mutação e salve a água!</p>
+                <p><strong>Gênero:</strong> Top-Down / Plataforma</p>
+                <p><strong>Tema:</strong> Guardiã das Águas</p>
+            </div>
 
-                    <h4
-                        style="color: var(--brand-red); margin: 2rem 0 1rem; font-family: 'Glacial Indifference'; letter-spacing: 1px;">
-                        SINOPSE</h4>
-                    <p>Em um mundo destruído pela ganância humana, acompanhamos <strong>Zoe</strong>, uma jovem de 14
-                        anos buscando sobreviver após perder seus pais. Ela parte em uma jornada a uma ilha que diziam
-                        não ter sido afetada pelo caos ao redor. Porém, durante sua viagem, seu barco acaba naufragando,
-                        levando-a para uma ilha sombria e poluída, onde lixos radioativos, sons estranhos e perigos
-                        espreitam a cada sombra.</p>
+            <!-- Slide 3: O Problema -->
+            <div class="slide" id="slide-3">
+                <h2>O Problema</h2>
+                <p><strong>Problema ambiental/social:</strong> Poluição e desperdício da água, contaminação de rios e nascentes.</p>
+                <p><strong>Por que importa?</strong> A água é essencial para a vida, mas está ameaçada pela ação humana.</p>
+                <p><strong>Contexto:</strong> O jogo aborda a importância da preservação dos recursos hídricos e o papel de cada um na proteção da água.</p>
+            </div>
 
-                    <h4
-                        style="color: var(--brand-red); margin: 2rem 0 1rem; font-family: 'Glacial Indifference'; letter-spacing: 1px;">
-                        A HISTÓRIA</h4>
-                    <p>Sabendo que aquele lugar não era o santuário prometido, Zoe precisa de uma forma de voltar ao seu
-                        destino inicial. A ilha onde está presa esconde um passado sombrio: há 40 anos, uma falha na
-                        manutenção — um descuido humano — causou a explosão de uma usina local. Essa catástrofe devastou
-                        a fauna da região.</p>
-                    <p>Muitos não sobreviveram, mas a radiação, combinada aos resquícios de um misterioso
-                        laboratório de testes em animais, fez com que as criaturas restantes sofressem mutações
-                        grotescas, transformando-as em feras agressivas e deformadas que agora caçam nas ruínas
-                        isoladas.</p>
-                </div>
+            <!-- Slide 4: Público-Alvo -->
+            <div class="slide" id="slide-4">
+                <h2>Público-Alvo</h2>
+                <p><strong>Quem vai jogar?</strong> Jovens e adolescentes interessados em jogos de aventura, ecologia e desafios.</p>
+                <p><strong>Idade:</strong> 12 a 18 anos</p>
+                <p><strong>Onde encontrar?</strong> Escolas, eventos de tecnologia, redes sociais e comunidades gamers.</p>
+            </div>
 
-                <div class="color-palette small-palette" style="margin-top: 3rem;">
-                    <div class="color-swatch" style="background-color: var(--roxo-logo);"></div>
-                    <div class="color-swatch" style="background-color: var(--azul-1);"></div>
-                    <div class="color-swatch" style="background-color: var(--azul-2);"></div>
-                    <div class="color-swatch" style="background-color: var(--azul-3);"></div>
-                    <div class="color-swatch" style="background-color: var(--roxo-digital);"></div>
-                    <div class="color-swatch" style="background-color: var(--roxo-digital-2);"></div>
-                    <div class="color-swatch" style="background-color: var(--lilas);"></div>
-                </div>
+            <!-- Slide 5: Mecânica Principal (Core Loop) -->
+            <div class="slide" id="slide-5">
+                <h2>Mecânica Principal</h2>
+                <p><strong>O que o jogador faz?</strong> Explora a ilha, coleta recursos, purifica água e enfrenta criaturas mutantes.</p>
+                <p><strong>Interação com a água:</strong> Purificação, coleta e uso estratégico para sobrevivência.</p>
+                <p><strong>Objetivo:</strong> Sobreviver, restaurar a ilha e proteger as fontes de água.</p>
+            </div>
 
-                <!-- Three column feature mimicking Last Oasis structure -->
-                <div class="feature-three-cols mt-4">
-                    <div class="feature-item">
-                        <h3 class="feature-title brush-font">EXPLORAÇÃO</h3>
-                        <div class="feature-img-box">
-                            <img src="1000204982.jpg" alt="Exploração Aquática">
-                        </div>
-                        <p>Navegue por águas densas e desvende o passado perdido da civilização submersa.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3 class="feature-title brush-font">SOBREVIVÊNCIA</h3>
-                        <div class="feature-img-box">
-                            <img src="1000204980.jpg" alt="UI Sobrevivência">
-                        </div>
-                        <p>Gerencie seus recursos, ilumine os caminhos e lide com a tensão do desconhecido.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3 class="feature-title brush-font">ATMOSFERA</h3>
-                        <div class="feature-img-box">
-                            <img src="1000204986.jpg" alt="Atmosfera">
-                        </div>
-                        <p>Uma imersão completa em cenários obscuros, pontuados por tons neons de mistério.</p>
-                    </div>
-                </div>
+            <!-- Slide 6: Gameplay (Screenshots/GIFs) -->
+            <div class="slide" id="slide-6">
+                <h2>Gameplay</h2>
+                <ul>
+                    <li>Interface (HUD) intuitiva</li>
+                    <li>Personagem Zoe em ação</li>
+                    <li>Cenários poluídos e ambientes de recuperação</li>
+                    <li>Mecânica de purificação de água funcionando</li>
+                </ul>
+                <img src="1000204982.jpg" alt="Gameplay 1" style="max-width: 200px; margin: 0.5rem;">
+                <img src="1000204980.jpg" alt="Gameplay 2" style="max-width: 200px; margin: 0.5rem;">
+            </div>
+
+            <!-- Slide 7: Modelo de Negócios -->
+            <div class="slide" id="slide-7">
+                <h2>Modelo de Negócios</h2>
+                <p><strong>Modelo:</strong> Gratuito para jogar (Free-to-play) com possíveis expansões educativas.</p>
+                <p><strong>Canais:</strong> WebGL, Itch.io, Google Play.</p>
+                <p><strong>Valor estimado:</strong> Proposta educativa, sem fins lucrativos inicialmente.</p>
+            </div>
+
+            <!-- Slide 8: Diferencial Competitivo -->
+            <div class="slide" id="slide-8">
+                <h2>Diferencial Competitivo</h2>
+                <p>União de narrativa ambiental, mecânicas de purificação de água e engajamento social.</p>
+                <p>Equipe multidisciplinar e foco em impacto real na conscientização.</p>
+            </div>
+
+            <!-- Slide 9: Roadmap/Próximos Passos -->
+            <div class="slide" id="slide-9">
+                <h2>Roadmap / Próximos Passos</h2>
+                <ul>
+                    <li>Finalizar arte e sons</li>
+                    <li>Polimento da jogabilidade</li>
+                    <li>Testes com público-alvo</li>
+                    <li>Entrega da Fase 3</li>
+                </ul>
+                <p><strong>Timeline:</strong> Março a Maio de 2026</p>
+            </div>
+
+            <!-- Slide 10: Demonstração/Call to Action -->
+            <div class="slide" id="slide-10">
+                <h2>Demonstração / Call to Action</h2>
+                <p><a href="#" target="_blank">Jogue o protótipo WebGL</a></p>
+                <p><a href="#" target="_blank">Assista ao vídeo pitch no YouTube</a></p>
+                <p>Venha testar e dar seu feedback!</p>
+            </div>
+
+            <!-- Slide 11: Equipe (Créditos) -->
+            <div class="slide" id="slide-11">
+                <h2>Equipe</h2>
+                <ul>
+                    <li>Ana Laura – Programadora</li>
+                    <li>Antonio Medeiros – Designer</li>
+                    <li>Ana Cecilia – Artista</li>
+                    <li>Ana Maria – Roteirista</li>
+                    <li>Sofia – Game Designer</li>
+                </ul>
+                <p>Contato: devscansados@email.com</p>
+            </div>
+
+            <!-- Slide 12: Agradecimentos -->
+            <div class="slide" id="slide-12">
+                <h2>Obrigado!</h2>
+                <p>Perguntas?</p>
+            </div>
+
+            <!-- Slide Extra: Sobre o Projeto Guardiã das Águas -->
+            <div class="slide" id="slide-projeto-guardia">
+                <h2>Sobre o Projeto Guardiã das Águas</h2>
+                <p><strong>Objetivo:</strong> O Projeto Guardiã das Águas visa promover a conscientização, proteção e uso sustentável dos recursos hídricos, envolvendo principalmente estudantes e comunidades escolares.</p>
+                <p><strong>Histórico:</strong> Criado pela Polícia Militar Ambiental de São Paulo em 2006, expandiu-se para diversas cidades, integrando escolas públicas e privadas.</p>
+                <p><strong>Ações Realizadas:</strong> Palestras educativas, plantio de árvores, limpeza de corpos d’água, visitas a áreas de preservação e monitoramento da qualidade da água por estudantes.</p>
+                <p><strong>Impacto:</strong> Conscientização ambiental, melhoria de áreas próximas e formação de multiplicadores ambientais.</p>
+                <p><strong>Contexto:</strong> Destaca a importância de cada pessoa na proteção dos recursos hídricos, promovendo cidadania e responsabilidade ambiental.</p>
             </div>
         </section>
 
@@ -191,6 +244,29 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Navegação de slides
+        const slides = document.querySelectorAll('.presentation-section .slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        document.getElementById('prev-slide').onclick = () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        };
+        document.getElementById('next-slide').onclick = () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        };
+
+        // Inicializa apresentação
+        showSlide(currentSlide);
+    </script>
 </body>
 
 </html>
