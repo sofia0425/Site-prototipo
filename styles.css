@@ -1,75 +1,210 @@
 /* Slides de apresentação */
 .presentation-section {
     background: var(--bg-dark);
-    padding: 3rem 0 4rem 0;
-    min-height: 100vh;
+    padding: 0;
+    display: block;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.presentation-section .slide {
+    background: rgba(10, 10, 20, 0.9);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 6rem 5%;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
+    border: none;
+    position: relative;
+    border-bottom: 1px solid rgba(142, 109, 181, 0.1);
 }
-.presentation-section .slide {
-    background: rgba(20, 20, 40, 0.95);
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(91, 40, 158, 0.18);
-    padding: 2.5rem 2rem 2rem 2rem;
-    margin: 1.5rem 0;
-    max-width: 600px;
-    width: 100%;
-    min-height: 340px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeInSlide 0.7s;
+
+.presentation-section .slide:hover {
+    transform: none;
+    box-shadow: none;
 }
-.presentation-section .slide h1, .presentation-section .slide h2 {
-    margin-bottom: 1.2rem;
+
+.presentation-section .slide h1,
+.presentation-section .slide h2 {
+    margin-bottom: 3rem;
     color: var(--roxo-logo);
     text-align: center;
+    font-family: var(--font-gothic);
+    font-size: 5rem;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(142, 109, 181, 0.3);
 }
-.presentation-section .slide p, .presentation-section .slide ul {
-    color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 0.7rem;
-    text-align: center;
-}
+
+.presentation-section .slide p,
 .presentation-section .slide ul {
-    list-style: disc inside;
-    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 900px;
+    line-height: 1.6;
 }
+
+.presentation-section .slide strong {
+    color: var(--roxo-logo);
+    font-size: 2rem;
+}
+
+.presentation-section .slide ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.presentation-section .slide ul li {
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.presentation-section .slide ul li::before {
+    content: '◈';
+    position: absolute;
+    left: 0;
+    color: var(--roxo-logo);
+    font-size: 1.5rem;
+}
+
 .logo-slide {
     display: block;
     margin: 0 auto 1rem auto;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(91, 40, 158, 0.18);
 }
+
 .slide-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    display: none;
 }
-.slide-btn {
-    background: var(--roxo-logo);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.7rem 2.2rem;
-    font-size: 1.1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(91, 40, 158, 0.10);
-}
-.slide-btn:hover {
-    background: var(--roxo-digital);
-    transform: translateY(-2px) scale(1.04);
-}
+
 @keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* Game Scenes Gallery - Enlarged */
+.game-scenes-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem 0;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scene-item {
+    flex: none;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scene-item:hover {
+    transform: scale(1.03) translateY(-10px);
+    z-index: 10;
+    box-shadow: 0 15px 50px rgba(91, 40, 158, 0.4);
+}
+
+.scene-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    font-size: 0.9rem;
+    color: var(--azul-1);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Project Demand Styles */
+.project-demand-badge {
+    background: var(--brand-red);
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+.emphasized-p {
+    font-size: 1.25rem !important;
+    line-height: 1.4;
+    color: white !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.project-details {
+    text-align: left !important;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--roxo-logo);
+    margin-bottom: 1.5rem;
+}
+
+.project-details p {
+    text-align: left !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.impact-note {
+    font-weight: 700;
+    color: var(--roxo-logo);
+    text-transform: uppercase;
+    font-size: 0.85rem !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 51, 51, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 51, 51, 0);
+    }
+}
+
 :root {
     --roxo-logo: #8e6db5;
     --azul-1: #91a4ce;
@@ -81,13 +216,32 @@
     --lilas: #dedae0;
 
     --brand-red: #ff3333;
-    /* Contrast color from reference */
     --bg-dark: #0a0a0a;
     --bg-darker: #050505;
     --text-light: #f5f5f5;
     --text-gray: #aaaaaa;
 
-    --glass-border: rgba(142, 109, 181, 0.3);
+    --font-neoteric: 'Syncopate', sans-serif;
+    --font-gothic: 'Archivo Black', sans-serif;
+    --font-sinner: 'Creepster', system-ui;
+}
+
+.immersive-bg.hero-main {
+    background: url('tela_inicio.png') center center/cover no-repeat;
+}
+
+.glitch {
+    font-family: var(--font-sinner);
+    font-size: 8rem;
+    color: #ff3333;
+    text-shadow: 6px 6px 0px black;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+
+.small-label {
+    font-family: var(--font-neoteric);
+    font-weight: 700;
 }
 
 @font-face {
@@ -114,6 +268,7 @@ body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
+    scroll-snap-type: y mandatory;
 }
 
 h1,
@@ -179,16 +334,18 @@ nav a:hover {
 }
 
 /* Hero Immersive */
+.hero-section {
+    scroll-snap-align: start;
+}
+
 .immersive-bg {
     min-height: 100vh;
-    background: url('hero-bg.png') center top/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
     padding-top: 100px;
-    /* Offset for navbar */
 }
 
 .immersive-bg::after {

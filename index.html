@@ -1,8 +1,3 @@
-        <!-- Controles de navegação dos slides -->
-        <div class="slide-controls">
-            <button id="prev-slide" class="slide-btn">Anterior</button>
-            <button id="next-slide" class="slide-btn">Próximo</button>
-        </div>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -12,7 +7,7 @@
     <title>Guardiã das Águas - Protótipo</title>
     <link rel="stylesheet" href="styles.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;500;700&family=Syncopate:wght@400;700&family=Archivo+Black&family=Creepster&display=swap"
         rel="stylesheet">
 </head>
 
@@ -35,8 +30,8 @@
     </header>
 
     <main>
-        <!-- Top Immersive Hero (Image 1000204982.jpg bg) -->
-        <section id="hero" class="hero-section immersive-bg">
+        <!-- Top Immersive Hero (Image tela_inicio.png bg) -->
+        <section id="hero" class="hero-section immersive-bg hero-main">
             <div class="hero-content">
                 <p class="small-label" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8); letter-spacing: 4px;">UM PROJETO
                     DE: DEVS CANSADOS PARA GUARDIÃ DAS ÁGUAS</p>
@@ -56,7 +51,6 @@
             <!-- Slide 1: Título -->
             <div class="slide" id="slide-1">
                 <h1 class="glitch" data-text="Guardiã das Águas">Guardiã das Águas</h1>
-                <img src="logo.png" alt="Logo do Jogo" class="logo-slide" style="max-width: 180px; margin: 1rem auto; display: block;">
                 <h2>Equipe: Devs Cansados</h2>
                 <p>Data: 25/02/2026</p>
             </div>
@@ -72,38 +66,54 @@
             <!-- Slide 3: O Problema -->
             <div class="slide" id="slide-3">
                 <h2>O Problema</h2>
-                <p><strong>Problema ambiental/social:</strong> Poluição e desperdício da água, contaminação de rios e nascentes.</p>
-                <p><strong>Por que importa?</strong> A água é essencial para a vida, mas está ameaçada pela ação humana.</p>
-                <p><strong>Contexto:</strong> O jogo aborda a importância da preservação dos recursos hídricos e o papel de cada um na proteção da água.</p>
+                <p><strong>Problema ambiental/social:</strong> Poluição e desperdício da água, contaminação de rios e
+                    nascentes.</p>
+                <p><strong>Por que importa?</strong> A água é essencial para a vida, mas está ameaçada pela ação humana.
+                </p>
+                <p><strong>Contexto:</strong> O jogo aborda a importância da preservação dos recursos hídricos e o papel
+                    de cada um na proteção da água.</p>
             </div>
 
             <!-- Slide 4: Público-Alvo -->
             <div class="slide" id="slide-4">
                 <h2>Público-Alvo</h2>
-                <p><strong>Quem vai jogar?</strong> Jovens e adolescentes interessados em jogos de aventura, ecologia e desafios.</p>
+                <p><strong>Quem vai jogar?</strong> Jovens e adolescentes interessados em jogos de aventura, ecologia e
+                    desafios.</p>
                 <p><strong>Idade:</strong> 12 a 18 anos</p>
-                <p><strong>Onde encontrar?</strong> Escolas, eventos de tecnologia, redes sociais e comunidades gamers.</p>
+                <p><strong>Onde encontrar?</strong> Escolas, eventos de tecnologia, redes sociais e comunidades gamers.
+                </p>
             </div>
 
             <!-- Slide 5: Mecânica Principal (Core Loop) -->
             <div class="slide" id="slide-5">
                 <h2>Mecânica Principal</h2>
-                <p><strong>O que o jogador faz?</strong> Explora a ilha, coleta recursos, purifica água e enfrenta criaturas mutantes.</p>
+                <p><strong>O que o jogador faz?</strong> Explora a ilha, coleta recursos, purifica água e enfrenta
+                    criaturas mutantes.</p>
                 <p><strong>Interação com a água:</strong> Purificação, coleta e uso estratégico para sobrevivência.</p>
                 <p><strong>Objetivo:</strong> Sobreviver, restaurar a ilha e proteger as fontes de água.</p>
             </div>
 
-            <!-- Slide 6: Gameplay (Screenshots/GIFs) -->
+            <!-- Slide 6: Gameplay (Cenas do Jogo) -->
             <div class="slide" id="slide-6">
-                <h2>Gameplay</h2>
-                <ul>
-                    <li>Interface (HUD) intuitiva</li>
-                    <li>Personagem Zoe em ação</li>
-                    <li>Cenários poluídos e ambientes de recuperação</li>
-                    <li>Mecânica de purificação de água funcionando</li>
-                </ul>
-                <img src="1000204982.jpg" alt="Gameplay 1" style="max-width: 200px; margin: 0.5rem;">
-                <img src="1000204980.jpg" alt="Gameplay 2" style="max-width: 200px; margin: 0.5rem;">
+                <h2>Cenas do Jogo</h2>
+                <div class="game-scenes-gallery">
+                    <div class="scene-item">
+                        <img src="cena_jogo1.png" alt="Cena do Jogo 1">
+                    </div>
+                    <div class="scene-item">
+                        <img src="cena_jogo2.png" alt="Cena do Jogo 2">
+                    </div>
+                    <div class="scene-item">
+                        <img src="cena_jogo3.png" alt="Cena do Jogo 3">
+                    </div>
+                    <div class="scene-item">
+                        <img src="cena_jogo4.png" alt="Cena do Jogo 4">
+                    </div>
+                    <div class="scene-item">
+                        <img src="cena_jogo5.png" alt="Cena do Jogo 5">
+                    </div>
+                </div>
+                <p class="gallery-caption">Explore a diversidade de ambientes e desafios da ilha.</p>
             </div>
 
             <!-- Slide 7: Modelo de Negócios -->
@@ -162,12 +172,20 @@
 
             <!-- Slide Extra: Sobre o Projeto Guardiã das Águas -->
             <div class="slide" id="slide-projeto-guardia">
-                <h2>Sobre o Projeto Guardiã das Águas</h2>
-                <p><strong>Objetivo:</strong> O Projeto Guardiã das Águas visa promover a conscientização, proteção e uso sustentável dos recursos hídricos, envolvendo principalmente estudantes e comunidades escolares.</p>
-                <p><strong>Histórico:</strong> Criado pela Polícia Militar Ambiental de São Paulo em 2006, expandiu-se para diversas cidades, integrando escolas públicas e privadas.</p>
-                <p><strong>Ações Realizadas:</strong> Palestras educativas, plantio de árvores, limpeza de corpos d’água, visitas a áreas de preservação e monitoramento da qualidade da água por estudantes.</p>
-                <p><strong>Impacto:</strong> Conscientização ambiental, melhoria de áreas próximas e formação de multiplicadores ambientais.</p>
-                <p><strong>Contexto:</strong> Destaca a importância de cada pessoa na proteção dos recursos hídricos, promovendo cidadania e responsabilidade ambiental.</p>
+                <div class="project-demand-badge">PROJETO SOB DEMANDA</div>
+                <h2>Projeto Guardiã das Águas</h2>
+                <p class="emphasized-p">Este jogo foi desenvolvido especificamente atendendo à demanda do
+                    <strong>Projeto Guardiã das Águas</strong>, integrando diversão e conscientização ambiental.
+                </p>
+                <div class="project-details">
+                    <p><strong>Objetivo:</strong> Promover a conscientização, proteção e uso sustentável dos recursos
+                        hídricos nas comunidades escolares.</p>
+                    <p><strong>Histórico:</strong> Iniciado pela Polícia Militar Ambiental de São Paulo em 2006, hoje é
+                        referência em educação ambiental prática.</p>
+                    <p><strong>Ações:</strong> Palestras, plantios, limpeza de rios e monitoramento participativo da
+                        qualidade da água.</p>
+                </div>
+                <p class="impact-note">Transformando o aprendizado em uma jornada épica de preservação.</p>
             </div>
         </section>
 
@@ -244,29 +262,6 @@
     </main>
 
     <script src="script.js"></script>
-    <script>
-        // Navegação de slides
-        const slides = document.querySelectorAll('.presentation-section .slide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-        }
-
-        document.getElementById('prev-slide').onclick = () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        };
-        document.getElementById('next-slide').onclick = () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        };
-
-        // Inicializa apresentação
-        showSlide(currentSlide);
-    </script>
 </body>
 
 </html>
